@@ -8,7 +8,7 @@ namespace Dima.Api.Data.Mappings.Identity
     {
         public void Configure(EntityTypeBuilder<IdentityUserLogin<long>> builder)
         {
-            builder.ToTable("IdentityClaim");
+            builder.ToTable("IdentityUserLogin");
             builder.HasKey(ul => new { ul.LoginProvider, ul.ProviderKey });
             builder.Property(ul => ul.LoginProvider).HasMaxLength(128);
             builder.Property(ul => ul.ProviderKey).HasMaxLength(128);
